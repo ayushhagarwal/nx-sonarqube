@@ -1,9 +1,9 @@
 {
-  "name": "@koliveira15/nx-sonarqube",
+  "name": "@ayushhagarwal/nx-sonarqube",
   "description": "A Nx plugin that scans projects using SonarQube / SonarCloud.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/koliveira15/nx-sonarqube.git",
+    "url": "https://github.com/ayushhagarwal/nx-sonarqube.git",
     "directory": "packages/nx-sonarqube"
   },
   "version": "1.0.0",
