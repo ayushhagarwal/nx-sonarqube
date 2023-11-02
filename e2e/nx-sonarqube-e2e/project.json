@@ -13,7 +13,7 @@
       "dependsOn": ["nx-sonarqube:build"]
     },
     "sonar": {
-      "executor": "@ayushhagarwal/nx-sonarqube:scan",
+      "executor": "ayush-nx-sonarqube:scan",
       "options": {
         "name": "nx-sonarqube",
         "hostUrl": "https://sonarcloud.io",

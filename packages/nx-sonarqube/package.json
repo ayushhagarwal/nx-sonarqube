@@ -1,5 +1,5 @@
 {
-  "name": "@ayushhagarwal/nx-sonarqube",
+  "name": "ayush-nx-sonarqube",
   "description": "A Nx plugin that scans projects using SonarQube / SonarCloud.",
   "repository": {
     "type": "git",

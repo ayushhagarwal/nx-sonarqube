@@ -62,7 +62,7 @@ function updateProjectConfig(
     );
   } else {
     projectConfiguration.targets.sonar = {
-      executor: '@ayushhagarwal/nx-sonarqube:scan',
+      executor: 'ayush-nx-sonarqube:scan',
       options: { ...options },
     };
     updateProjectConfiguration(tree, options.name, projectConfiguration);
