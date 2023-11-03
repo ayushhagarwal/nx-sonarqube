@@ -71,10 +71,13 @@ export async function determinePaths(
       sources.push(dep.sourceRoot);
 
       if (dep.testTarget) {
-        if (dep.testTarget.options.coverageDirectory) {
+        logger.info(`Inside Executor if Block`);
+        logger.info(`testTarget object: ${dep.testTarget}`);
+        if (dep.testTarget.outputs[0]) {
+          logger.info(`testTarget options object: ${dep.testTarget.outputs}`);
           lcovPaths.push(
             joinPathFragments(
-              dep.testTarget.options.coverageDirectory
+              dep.testTarget.outputs[0]
                 .replace(new RegExp(/'/g), '')
                 .replace(/^(?:\.\.\/)+/, ''),
               'lcov.info'
@@ -245,7 +248,9 @@ function getPackageJsonVersion(dir = ''): string {
       `resolved package json from ${dir}, package version:${version}`
     );
   } catch (e) {
-    logger.debug(`Unable to open file ${joinPathFragments(dir, 'package.json')}`)
+    logger.debug(
+      `Unable to open file ${joinPathFragments(dir, 'package.json')}`
+    );
   }
   return version;
 }
