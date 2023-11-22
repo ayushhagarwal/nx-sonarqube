@@ -71,10 +71,7 @@ export async function determinePaths(
       sources.push(dep.sourceRoot);
 
       if (dep.testTarget) {
-        logger.info(`Inside Executor if Block`);
-        logger.info(`testTarget object: ${dep.testTarget}`);
         if (dep.testTarget.outputs[0]) {
-          logger.info(`testTarget options object: ${dep.testTarget.outputs}`);
           lcovPaths.push(
             joinPathFragments(
               dep.testTarget.outputs[0]

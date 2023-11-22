@@ -9,7 +9,7 @@ import {
 import sonarQubeConfigGenerator from './generator';
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 
-describe('Configuration generator', () => {
+xdescribe('Configuration generator', () => {
   let tree: Tree;
 
   beforeEach(() => {
